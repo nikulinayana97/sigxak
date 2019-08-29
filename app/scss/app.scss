@@ -89,6 +89,35 @@ button, .button{
     &__text{
       font-size: 1.125rem;
       font-weight: 500;
+
+      a:hover{
+        color: $main-bcg;
+      }
+    }
+
+    @media only screen and (max-width: 540px){
+      &__title{
+        font-size: 5.5rem;
+      }
+
+      &__sub-title{
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+
+      &__text{
+        font-size: 1rem;
+      }
+    }
+
+    @media only screen and (max-width: 360px){
+      &__title{
+        font-size: 4rem;
+      }
+
+      &__sub-title{
+        font-size: 2rem;
+      }
     }
   }
 }
@@ -99,10 +128,11 @@ button, .button{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 24px 0;
+  padding: 20px 0;
   list-style: none;
   background-color: $main-bcg;
   text-transform: uppercase;
+  font-size: .9rem;
 
   &__link{
     padding: 0 15px;
@@ -120,6 +150,30 @@ button, .button{
 
   &__item:last-of-type:after{
     content: none;
+  }
+
+  @media only screen and (max-width: 768px){
+    .menu__item:before, 
+    .menu__item:after{
+      content: none;
+    }
+
+    .menu__link{
+      padding: 0 10px;
+    }
+  }
+
+  @media only screen and (max-width: 540px){
+    .menu__link{
+      padding: 0 5px;
+      font-size: .7rem;
+    }
+  }
+
+  @media only screen and (max-width: 360px){
+    .menu__link{
+      font-size: .5rem;
+    }
   }
 }
 
@@ -139,6 +193,10 @@ button, .button{
   color: $main-color;
   font-weight: 600;
   text-transform: uppercase;
+
+  @media only screen and (max-width: 360px){
+    font-size: 2.5rem;
+  }
 }
 
 .dots-style{
@@ -169,6 +227,13 @@ button, .button{
 
 .top__text{
   text-align: center;
+}
+
+@media only screen and (max-width: 460px){
+  div.top__text{
+    padding-top: 35px;
+    padding-bottom: 15px;
+  }
 }
 
 .b-about{
@@ -257,6 +322,7 @@ button, .button{
 
       .hover--text{
         margin-bottom: 20px;
+        line-height: 1.5;
       }
 
       .hover--link{
@@ -312,6 +378,34 @@ button, .button{
       }
     }
   }
+
+  @media only screen and (max-width: 450px){
+    & .section__person .b-person__info{
+      padding: 10px;
+    }
+
+    & .section__person .b-person__name:before, 
+    & .section__person .b-person__name:after{
+      padding: 5px;
+    }
+
+    & .section__person .b-person__info--hover .hover--link .social{
+      margin: 0 3px;
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  @media only screen and (max-width: 360px){
+    .hover--text{
+      font-size: .65rem;
+    }
+
+    & .section__person .b-person__name:before, 
+    & .section__person .b-person__name:after{
+      content: none;
+    }
+  }
 }
 
 // sx-portfolio
@@ -341,7 +435,21 @@ button, .button{
   }
 
   @media only screen and (max-width: 768px){
-      font-size: .75rem;
+    font-size: .75rem;
+  }
+
+  @media only screen and (max-width: 540px){
+
+    & .menu__link{
+      font-size: .55rem;
+    }
+  }
+
+  @media only screen and (max-width: 360px){
+
+    & .menu__link{
+      font-size: .38rem;
+    }
   }
 } 
 
@@ -436,8 +544,8 @@ button, .button{
 
     .b-services__b-img{
       margin-bottom: 20px;
-      width: 114px;
-      height: 114px;
+      width: 13vw;
+      height: 13vw;
       background-color: #00A388;
       text-align: center;
     }
@@ -445,6 +553,7 @@ button, .button{
     &--img{
       margin-top: 50%;
       transform: translateY(-50%);
+      width: 8vw;
     }
 
     &--title{
@@ -698,6 +807,12 @@ button, .button{
       }
     }
   }
+
+  @media only screen and (max-width: 460px){
+    &__input--btn{
+        font-size: 1rem;
+    }
+  }
 }
 
 // sx-menu--2
@@ -705,7 +820,7 @@ button, .button{
 .sx-menu--2{
 
   .menu{
-    padding: 43px 0 33px 0;
+    padding: 30px 0;
     background-color: #02C5A5;
 
     &__item{
@@ -758,8 +873,7 @@ button, .button{
     }
   }
 
-  &__b-link{
-    margin-right: 129px;  
+  &__b-link{ 
     display: flex;  
     flex-direction: row;
   }
@@ -769,6 +883,10 @@ button, .button{
 
     &:last-of-type{
       margin-right: 0;  
+    }
+
+    img{
+      width: 8vw;
     }
   }
 
@@ -783,11 +901,47 @@ button, .button{
     background-color: #140E1D;
 
     &--text{
+      margin: 0 15px;
       font-family: $main-ff;
-      font-size:  0.875;
+      font-size:  0.875rem;
       color: #fff;
       text-transform: uppercase;  
       font-weight: 400; 
+    }
+  }
+
+  @media only screen and (max-width: 1024px){
+    .b-footer__block{
+      padding: 50px 0;
+    }
+
+    .b-footer__block{
+      flex-direction: column;
+    }
+
+    .b-footer__section{
+      margin-bottom: 50px;
+    }
+
+    .b-footer__contact{
+      margin-right: 35px;
+      font-size: .75rem;
+
+      &:last-of-type{
+        margin-right: 0;  
+      }
+    }
+  }
+
+  @media only screen and (max-width: 560px){
+    &__rights--text{
+      font-size: .5rem;
+    }
+  }
+
+  @media only screen and (max-width: 400px){
+    .b-footer__contact{
+      font-size: .55rem;
     }
   }
 }
