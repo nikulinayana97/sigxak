@@ -1,0 +1,26 @@
+{
+  "name": "ba-gulp-test-1",
+  "version": "1.0.0",
+  "description": "simple boilerplate for web sites",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vladik",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "imagemin-pngquant": "^8.0.0"
+  },
+  "dependencies": {
+    "gulp-webp": "^4.0.1"
+  }
+}
